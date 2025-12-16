@@ -18,8 +18,8 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #F9FAFB;
-            color: #1f2937;
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);
+            color: white;
         }
 
         .app-container {
@@ -31,13 +31,12 @@
         /* Side Tabs */
         .side-tabs {
             width: 70px;
-            background: #FFFFFF;
+            background: rgba(0,0,0,0.3);
             display: flex;
             flex-direction: column;
             padding: 15px 10px;
             gap: 10px;
             flex-shrink: 0;
-            border-left: 1px solid #E9EAEB;
         }
 
         .side-tab {
@@ -59,74 +58,87 @@
         }
 
         .side-tab.events {
-            background: #F7F8F9;
-            color: #3b82f6;
-            border: 2px solid #E9EAEB;
+            background: rgba(59, 130, 246, 0.2);
+            color: #93c5fd;
+            border: 2px solid rgba(59, 130, 246, 0.3);
         }
 
         .side-tab.events.active {
             background: linear-gradient(135deg, #3b82f6, #06b6d4);
             color: white;
             border-color: transparent;
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
         }
 
         .side-tab.menu {
-            background: #F7F8F9;
-            color: #f97316;
-            border: 2px solid #E9EAEB;
+            background: rgba(249, 115, 22, 0.2);
+            color: #fdba74;
+            border: 2px solid rgba(249, 115, 22, 0.3);
         }
 
         .side-tab.menu.active {
             background: linear-gradient(135deg, #f97316, #eab308);
             color: white;
             border-color: transparent;
-            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+            box-shadow: 0 4px 20px rgba(249, 115, 22, 0.4);
         }
 
         .side-tab.refund {
-            background: #F7F8F9;
-            color: #ef4444;
-            border: 2px solid #E9EAEB;
+            background: rgba(239, 68, 68, 0.2);
+            color: #fca5a5;
+            border: 2px solid rgba(239, 68, 68, 0.3);
         }
 
         .side-tab.refund.active {
             background: linear-gradient(135deg, #ef4444, #dc2626);
             color: white;
             border-color: transparent;
-            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+            box-shadow: 0 4px 20px rgba(239, 68, 68, 0.4);
         }
 
         .side-tab.calculator {
-            background: #F7F8F9;
-            color: #10b981;
-            border: 2px solid #E9EAEB;
+            background: rgba(16, 185, 129, 0.2);
+            color: #6ee7b7;
+            border: 2px solid rgba(16, 185, 129, 0.3);
         }
 
         .side-tab.calculator.active {
             background: linear-gradient(135deg, #10b981, #059669);
             color: white;
             border-color: transparent;
-            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4);
         }
 
         .side-tab.databox {
-            background: #F7F8F9;
-            color: #64748b;
-            border: 2px solid #E9EAEB;
+            background: rgba(100, 116, 139, 0.2);
+            color: #94a3b8;
+            border: 2px solid rgba(100, 116, 139, 0.3);
         }
 
         .side-tab.databox.active {
             background: linear-gradient(135deg, #64748b, #475569);
             color: white;
             border-color: transparent;
-            box-shadow: 0 4px 12px rgba(100, 116, 139, 0.3);
+            box-shadow: 0 4px 20px rgba(100, 116, 139, 0.4);
+        }
+
+        .side-tab.meta {
+            background: rgba(59, 89, 152, 0.2);
+            color: #8b9dc3;
+            border: 2px solid rgba(59, 89, 152, 0.3);
+        }
+
+        .side-tab.meta.active {
+            background: linear-gradient(135deg, #1877f2, #3b5998);
+            color: white;
+            border-color: transparent;
+            box-shadow: 0 4px 20px rgba(24, 119, 242, 0.4);
         }
 
         .side-tab .tooltip {
             position: absolute;
             right: 60px;
-            background: #1f2937;
+            background: #1e293b;
             color: white;
             padding: 8px 12px;
             border-radius: 8px;
@@ -178,10 +190,10 @@
         .progress-step {
             flex: 1;
             padding: 10px 8px;
-            background: #FFFFFF;
-            border: 1px solid #E9EAEB;
+            background: rgba(255,255,255,0.1);
+            border: none;
             border-radius: 10px;
-            color: #64748b;
+            color: #94a3b8;
             cursor: pointer;
             transition: all 0.3s ease;
             font-size: 13px;
@@ -189,37 +201,37 @@
         }
 
         .progress-step:hover {
-            background: #F7F8F9;
-            border-color: #D5D6D7;
+            background: rgba(255,255,255,0.15);
         }
 
         .events-content .progress-step.active {
             background: linear-gradient(135deg, #3b82f6, #06b6d4);
             color: white;
-            border-color: transparent;
         }
 
         .menu-content .progress-step.active {
             background: linear-gradient(135deg, #f97316, #eab308);
             color: white;
-            border-color: transparent;
         }
 
         .refund-content .progress-step.active {
             background: linear-gradient(135deg, #ef4444, #dc2626);
             color: white;
-            border-color: transparent;
+        }
+
+        .meta-content .progress-step.active {
+            background: linear-gradient(135deg, #1877f2, #3b5998);
+            color: white;
         }
 
         .progress-step.completed {
-            background: #ecfdf5;
-            color: #059669;
-            border-color: #a7f3d0;
+            background: rgba(34, 197, 94, 0.3);
+            color: #86efac;
         }
 
         .progress-bar {
             height: 4px;
-            background: #E9EAEB;
+            background: rgba(255,255,255,0.1);
             border-radius: 10px;
             overflow: hidden;
         }
@@ -236,6 +248,10 @@
             background: linear-gradient(90deg, #ef4444, #dc2626);
         }
 
+        .meta-content .progress-fill {
+            background: linear-gradient(90deg, #1877f2, #3b5998);
+        }
+
         .progress-fill {
             height: 100%;
             transition: width 0.5s ease;
@@ -244,23 +260,22 @@
 
         /* Step Info */
         .step-info {
-            background: #FFFFFF;
+            background: rgba(255,255,255,0.08);
             border-radius: 12px;
             padding: 15px 18px;
             margin-bottom: 10px;
             flex-shrink: 0;
-            border: 1px solid #E9EAEB;
         }
 
         .step-info h2 {
             font-size: 1.2em;
             margin-bottom: 5px;
-            color: #1f2937;
+            color: #f8fafc;
         }
 
         .step-info p {
             font-size: 0.95em;
-            color: #4b5563;
+            color: #cbd5e1;
             line-height: 1.5;
         }
 
@@ -268,22 +283,20 @@
         .screenshot-container {
             flex: 1;
             min-height: 0;
-            background: #FFFFFF;
+            background: #1e293b;
             border-radius: 12px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            border: 1px solid #E9EAEB;
         }
 
         .browser-chrome {
-            background: #F7F8F9;
+            background: #334155;
             padding: 10px 15px;
             display: flex;
             align-items: center;
             gap: 12px;
             flex-shrink: 0;
-            border-bottom: 1px solid #E9EAEB;
         }
 
         .browser-dots {
@@ -303,14 +316,13 @@
 
         .browser-url {
             flex: 1;
-            background: #FFFFFF;
+            background: #1e293b;
             padding: 6px 12px;
             border-radius: 6px;
-            color: #64748b;
+            color: #94a3b8;
             font-size: 12px;
             text-align: left;
             direction: ltr;
-            border: 1px solid #E9EAEB;
         }
 
         .screenshot-wrapper {
@@ -360,6 +372,10 @@
             background: linear-gradient(135deg, #ef4444, #dc2626);
         }
 
+        .meta-content .step-badge {
+            background: linear-gradient(135deg, #1877f2, #3b5998);
+        }
+
         /* Controls */
         .controls {
             display: flex;
@@ -390,7 +406,7 @@
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
         .btn-tips {
@@ -399,18 +415,13 @@
         }
 
         .btn-tips:hover {
-            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
         }
 
         .btn-secondary {
-            background: #FFFFFF;
-            color: #4b5563;
-            border: 1px solid #E9EAEB;
-        }
-
-        .btn-secondary:hover {
-            background: #F7F8F9;
-            border-color: #D5D6D7;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.2);
         }
 
         .btn-secondary:disabled {
@@ -442,10 +453,14 @@
             background: linear-gradient(135deg, #ef4444, #dc2626);
         }
 
+        .meta-content .btn-link {
+            background: linear-gradient(135deg, #1877f2, #3b5998);
+        }
+
         .divider {
             width: 1px;
             height: 30px;
-            background: #E9EAEB;
+            background: rgba(255,255,255,0.2);
         }
 
         /* Tips Drawer */
@@ -472,14 +487,13 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: #FFFFFF;
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
             border-radius: 24px 24px 0 0;
             transform: translateY(100%);
             transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             z-index: 999;
             max-height: 80vh;
             overflow-y: auto;
-            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
         }
 
         .tips-drawer.active {
@@ -489,7 +503,7 @@
         .drawer-handle {
             width: 40px;
             height: 4px;
-            background: #D5D6D7;
+            background: rgba(255,255,255,0.3);
             border-radius: 2px;
             margin: 12px auto;
         }
@@ -499,7 +513,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 0 25px 20px;
-            border-bottom: 1px solid #E9EAEB;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
         .drawer-header h3 {
@@ -507,21 +521,25 @@
         }
 
         .events-drawer .drawer-header h3 {
-            color: #3b82f6;
+            color: #60a5fa;
         }
 
         .menu-drawer .drawer-header h3 {
-            color: #f97316;
+            color: #fbbf24;
         }
 
         .refund-drawer .drawer-header h3 {
-            color: #ef4444;
+            color: #f87171;
+        }
+
+        .meta-drawer .drawer-header h3 {
+            color: #1877f2;
         }
 
         .close-drawer {
-            background: #F7F8F9;
-            border: 1px solid #E9EAEB;
-            color: #64748b;
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: white;
             width: 36px;
             height: 36px;
             border-radius: 50%;
@@ -533,7 +551,7 @@
         }
 
         .close-drawer:hover {
-            background: #ECEDEE;
+            background: rgba(255,255,255,0.2);
         }
 
         .tips-content {
@@ -547,13 +565,12 @@
         }
 
         .tip-item {
-            background: #F9FAFB;
+            background: rgba(255,255,255,0.05);
             border-radius: 12px;
             padding: 20px;
             display: flex;
             align-items: flex-start;
             gap: 15px;
-            border: 1px solid #E9EAEB;
         }
 
         .tip-icon {
@@ -562,19 +579,23 @@
         }
 
         .events-drawer .tip-icon {
-            color: #3b82f6;
+            color: #60a5fa;
         }
 
         .menu-drawer .tip-icon {
-            color: #f97316;
+            color: #fbbf24;
         }
 
         .refund-drawer .tip-icon {
-            color: #ef4444;
+            color: #f87171;
+        }
+
+        .meta-drawer .tip-icon {
+            color: #1877f2;
         }
 
         .tip-item p {
-            color: #4b5563;
+            color: #e2e8f0;
             line-height: 1.6;
             font-size: 0.95em;
         }
@@ -582,9 +603,9 @@
         .drawer-footer {
             padding: 20px 25px;
             text-align: center;
-            color: #9ca3af;
+            color: #64748b;
             font-size: 13px;
-            border-top: 1px solid #E9EAEB;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
 
         /* Calculator Tab Styles */
@@ -611,16 +632,16 @@
 
         .databox-header h2 {
             font-size: 1.3em;
-            color: #1f2937;
+            color: #e2e8f0;
             font-weight: 600;
         }
 
         .databox-wrapper {
             flex: 1;
-            background: #FFFFFF;
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 12px;
             padding: 10px;
-            border: 1px solid #E9EAEB;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             min-height: 0;
             overflow: hidden;
         }
@@ -631,7 +652,7 @@
             height: 100%;
             border-radius: 8px;
             overflow: hidden;
-            background: #F9FAFB;
+            background: #0f172a;
         }
 
         .databox-iframe-container iframe {
@@ -653,19 +674,18 @@
 
         .calc-form-section {
             flex: 1;
-            background: #FFFFFF;
+            background: rgba(255,255,255,0.08);
             border-radius: 16px;
             padding: 20px;
             overflow-y: auto;
-            border: 1px solid #E9EAEB;
         }
 
         .calc-results-section {
             flex: 1;
-            background: #ecfdf5;
+            background: rgba(16, 185, 129, 0.1);
             border-radius: 16px;
             padding: 20px;
-            border: 1px solid #a7f3d0;
+            border: 2px solid rgba(16, 185, 129, 0.3);
             overflow-y: auto;
         }
 
@@ -676,12 +696,12 @@
 
         .calc-header h2 {
             font-size: 1.4em;
-            color: #059669;
+            color: #6ee7b7;
             margin-bottom: 5px;
         }
 
         .calc-header p {
-            color: #64748b;
+            color: #94a3b8;
             font-size: 0.9em;
         }
 
@@ -691,7 +711,7 @@
 
         .calc-input-group label {
             display: block;
-            color: #374151;
+            color: #e2e8f0;
             font-weight: 600;
             margin-bottom: 6px;
             font-size: 13px;
@@ -700,11 +720,11 @@
         .calc-input-group input {
             width: 100%;
             padding: 10px 12px;
-            border: 1px solid #E9EAEB;
+            border: 2px solid rgba(255,255,255,0.1);
             border-radius: 8px;
             font-size: 14px;
-            background: #FFFFFF;
-            color: #1f2937;
+            background: rgba(255,255,255,0.05);
+            color: white;
             direction: ltr;
             text-align: right;
         }
@@ -715,12 +735,12 @@
         }
 
         .calc-input-group input::placeholder {
-            color: #9ca3af;
+            color: #64748b;
         }
 
         .calc-hint {
             font-size: 11px;
-            color: #9ca3af;
+            color: #64748b;
             margin-top: 4px;
         }
 
@@ -733,10 +753,10 @@
         .calc-toggle-btn {
             flex: 1;
             padding: 8px 10px;
-            border: 1px solid #E9EAEB;
+            border: 2px solid rgba(255,255,255,0.1);
             border-radius: 8px;
-            background: #FFFFFF;
-            color: #64748b;
+            background: transparent;
+            color: #94a3b8;
             font-size: 12px;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -769,48 +789,44 @@
 
         .calc-submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
         }
 
         .calc-result-card {
-            background: #FFFFFF;
+            background: rgba(255,255,255,0.05);
             padding: 15px;
             border-radius: 12px;
             margin-bottom: 12px;
             border-right: 4px solid #10b981;
-            border-top: 1px solid #E9EAEB;
-            border-bottom: 1px solid #E9EAEB;
-            border-left: 1px solid #E9EAEB;
         }
 
         .calc-result-label {
             font-size: 12px;
-            color: #64748b;
+            color: #94a3b8;
             margin-bottom: 4px;
         }
 
         .calc-result-value {
             font-size: 24px;
             font-weight: bold;
-            color: #1f2937;
+            color: white;
             direction: ltr;
             text-align: right;
         }
 
-        .calc-result-value.positive { color: #059669; }
-        .calc-result-value.warning { color: #d97706; }
-        .calc-result-value.negative { color: #dc2626; }
+        .calc-result-value.positive { color: #10b981; }
+        .calc-result-value.warning { color: #f59e0b; }
+        .calc-result-value.negative { color: #ef4444; }
 
         .calc-summary {
-            background: #FFFFFF;
+            background: rgba(255,255,255,0.05);
             padding: 15px;
             border-radius: 12px;
             margin-top: 15px;
-            border: 1px solid #E9EAEB;
         }
 
         .calc-summary h3 {
-            color: #059669;
+            color: #6ee7b7;
             margin-bottom: 12px;
             font-size: 14px;
         }
@@ -819,7 +835,7 @@
             display: flex;
             justify-content: space-between;
             padding: 8px 0;
-            border-bottom: 1px solid #E9EAEB;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
             font-size: 13px;
         }
 
@@ -828,24 +844,23 @@
         }
 
         .calc-summary-label {
-            color: #64748b;
+            color: #94a3b8;
         }
 
         .calc-summary-value {
             font-weight: 600;
-            color: #1f2937;
+            color: white;
             direction: ltr;
         }
 
         .calc-error {
-            background: #fef2f2;
-            color: #dc2626;
+            background: rgba(239, 68, 68, 0.2);
+            color: #fca5a5;
             padding: 10px;
             border-radius: 8px;
             margin-top: 10px;
             font-size: 13px;
             display: none;
-            border: 1px solid #fecaca;
         }
 
         .calc-error.show {
@@ -858,7 +873,7 @@
             align-items: center;
             justify-content: center;
             height: 100%;
-            color: #9ca3af;
+            color: #64748b;
             text-align: center;
         }
 
@@ -866,8 +881,7 @@
             width: 60px;
             height: 60px;
             margin-bottom: 15px;
-            opacity: 0.4;
-            color: #059669;
+            opacity: 0.5;
         }
 
         @media (max-width: 900px) {
@@ -928,6 +942,13 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
                 </svg>
                 <span class="tooltip">דוח ביצועים</span>
+            </button>
+            <button class="side-tab meta" data-tab="meta">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                </svg>
+                <span class="tooltip">מודעות מטא</span>
             </button>
         </div>
 
@@ -1251,10 +1272,71 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Meta Ad Library Content -->
+            <div class="tab-content meta-content" id="metaContent">
+                <div class="progress-container">
+                    <div class="progress-steps">
+                        <button class="progress-step active" data-step="0">1. הגדרות חיפוש</button>
+                        <button class="progress-step" data-step="1">2. חיפוש מפרסם</button>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 50%"></div>
+                    </div>
+                </div>
+
+                <div class="step-info">
+                    <h2>שלב 1: הגדרות חיפוש</h2>
+                    <p>היכנסו ל-<strong>Meta Ad Library</strong>, בחרו מיקום <strong>"Israel"</strong> וקטגוריה <strong>"All ads"</strong>.</p>
+                </div>
+
+                <div class="screenshot-container">
+                    <div class="browser-chrome">
+                        <div class="browser-dots">
+                            <div class="browser-dot red"></div>
+                            <div class="browser-dot yellow"></div>
+                            <div class="browser-dot green"></div>
+                        </div>
+                        <div class="browser-url">facebook.com/ads/library</div>
+                    </div>
+                    <div class="screenshot-wrapper">
+                        <div class="step-badge">1</div>
+                        <img class="screenshot" src="" alt="Step 1">
+                        <img class="screenshot hidden" src="" alt="Step 2">
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button class="btn btn-secondary prev-btn" disabled>
+                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                        הקודם
+                    </button>
+                    <button class="btn btn-secondary next-btn">
+                        הבא
+                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                    <div class="divider"></div>
+                    <button class="btn btn-tips tips-btn" data-drawer="meta">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                        טיפים שימושיים
+                    </button>
+                    <div class="divider"></div>
+                    <a href="https://www.facebook.com/ads/library" target="_blank" class="btn-link">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                        </svg>
+                        Meta Ad Library
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
-
-    <!-- Drawer Overlay -->
     <div class="drawer-overlay" id="drawerOverlay"></div>
 
     <!-- Events Tips Drawer -->
@@ -1357,6 +1439,42 @@
                 <div class="tip-item">
                     <span class="tip-icon">✓</span>
                     <p>שמרו את מספר העסקה לתיעוד לפני ביצוע ההחזר</p>
+                </div>
+            </div>
+        </div>
+        <div class="drawer-footer">
+            נוצר עבור מלון אלאיה פולג | Sorbet Agency © 2025
+        </div>
+    </div>
+
+    <!-- Meta Tips Drawer -->
+    <div class="tips-drawer meta-drawer" id="metaDrawer">
+        <div class="drawer-handle"></div>
+        <div class="drawer-header">
+            <h3>💡 טיפים שימושיים לצפייה במודעות</h3>
+            <button class="close-drawer">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <div class="tips-content">
+            <div class="tips-grid">
+                <div class="tip-item">
+                    <span class="tip-icon">👀</span>
+                    <p>ניתן לראות את המודעות של כל מותג במטא - כולל של המתחרים שלכם!</p>
+                </div>
+                <div class="tip-item">
+                    <span class="tip-icon">✓</span>
+                    <p>חפשו לפי שם המפרסם או לפי מילות מפתח שמופיעות במודעות</p>
+                </div>
+                <div class="tip-item">
+                    <span class="tip-icon">✓</span>
+                    <p>ניתן לסנן לפי פלטפורמה - פייסבוק, אינסטגרם, או Messenger</p>
+                </div>
+                <div class="tip-item">
+                    <span class="tip-icon">✓</span>
+                    <p>לחצו על מודעה ספציפית לראות פרטים נוספים כמו תאריך התחלה</p>
                 </div>
             </div>
         </div>
@@ -1538,6 +1656,11 @@
             });
         });
 
+        // Format number with commas
+        function formatNumber(num) {
+            return num.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        }
+
         document.getElementById('calculatorForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -1575,10 +1698,10 @@
             const roi = totalSpend > 0 ? ((revenue - totalSpend) / totalSpend) * 100 : 0;
             
             document.getElementById('costPerConversion').textContent = 
-                conversions > 0 ? `₪${costPerConversion.toFixed(2)}` : 'אין סגירות';
+                conversions > 0 ? `₪${formatNumber(costPerConversion)}` : 'אין סגירות';
             
             const roasElement = document.getElementById('roas');
-            roasElement.textContent = `${roas.toFixed(2)}x`;
+            roasElement.textContent = `${formatNumber(roas)}x`;
             
             roasElement.classList.remove('positive', 'warning', 'negative');
             if (roas >= 3) {
@@ -1589,10 +1712,10 @@
                 roasElement.classList.add('negative');
             }
             
-            document.getElementById('totalSpend').textContent = `₪${totalSpend.toFixed(2)}`;
-            document.getElementById('conversionRate').textContent = `${conversionRate.toFixed(2)}%`;
-            document.getElementById('netProfit').textContent = `₪${netProfit.toFixed(2)}`;
-            document.getElementById('roi').textContent = `${roi.toFixed(2)}%`;
+            document.getElementById('totalSpend').textContent = `₪${formatNumber(totalSpend)}`;
+            document.getElementById('conversionRate').textContent = `${formatNumber(conversionRate)}%`;
+            document.getElementById('netProfit').textContent = `₪${formatNumber(netProfit)}`;
+            document.getElementById('roi').textContent = `${formatNumber(roi)}%`;
             
             document.getElementById('calcPlaceholder').style.display = 'none';
             document.getElementById('resultsContent').style.display = 'block';
